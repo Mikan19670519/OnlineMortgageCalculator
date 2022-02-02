@@ -23,3 +23,6 @@ Change Web.config - source
  <connectionStrings>
     <add name="LoginRegistrationEntities" connectionString="metadata=res://*/Models.DataModel.csdl|res://*/Models.DataModel.ssdl|res://*/Models.DataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MICHAEL-LAPTOP;initial catalog=LoginRegistration;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
   </connectionStrings>
+
+NOTE:
+I budget for about 4 hours and did not had time to implement an API solution.
