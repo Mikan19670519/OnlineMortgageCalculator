@@ -1,0 +1,64 @@
+﻿@model OnlineMortgageCalculator.ViewModel.LoanModel
+@{
+	ViewBag.Title = "Calculate";
+}
+
+<h2>Mortgage Calculator</h2>
+
+<form>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-2 text-right">Sale price (R)</div>
+				<div class="col-lg-10"><input id="txtPrice" class="form-control" name="txtPrice" type="text" /></div>
+			</div><br />
+			<div class="row">
+				<div class="col-lg-2 text-right">Down payment (%)</div>
+				<div class="col-lg-10"><input id="txtDown" class="form-control" name="txtDown" type="text" /></div>
+			</div><br />
+			<div class="row">
+				<div class="col-lg-2 text-right">Interest Rate (%)</div>
+				<div class="col-lg-10"><input id="txtRate" class="form-control" name="txtRate" type="text" /></div>
+			</div><br />
+			<div class="row">
+				<div class="col-lg-2 text-right">Term (years)</div>
+				<div class="col-lg-10"><input id="txtTerm" class="form-control" name="txtTerm" type="text" /></div>
+			</div><br /><br />
+			<div class="row">
+				<button id="mortgageCalc" onclick="return false">Calculate Monthly Payment</button>
+			</div><br /><br />
+			<div class="row">
+				<div class="col-lg-2 text-right">Monthly Payment</div>
+				<div class="col-lg-10"><input id="txtPayment" class="form-control" name="txtPayment" type="text" /></div>
+			</div><br />
+			<div class="row">
+				<div class="col-lg-2 text-right">Initial Interest Payment</div>
+				<div class="col-lg-10"><input id="txtInterestPayment" class="form-control" name="txtInterestPayment" type="text" /></div>
+			</div>
+		</div>
+	</div>
+</form>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+			$("#mortgageCalc").click(function () {
+				var L, P, n, c, dp;
+				L = parseInt($("#txtPrice").val());
+				n = parseInt($("#txtTerm").val()) * 12;
+				c = parseFloat($("#txtRate").val()) / 1200;
+				dp = 1 - parseFloat($("#txtDown").val()) / 100;
+				L = L * dp;
+				P = (L * (c * Math.pow(1 + c, n))) / (Math.pow(1 + c, n) - 1);
+				I = L * c;
+				if (!isNaN(I))
+					$("#txtInterestPayment").val(I.toFixed(2));
+				else
+					$("#txtInterestPayment").val('There was an error');
+				if (!isNaN(P))
+					$("#txtPayment").val(P.toFixed(2));
+				else
+					$("#txtPayment").val('There was an error');
+				return false;
+			});
+</script>
+

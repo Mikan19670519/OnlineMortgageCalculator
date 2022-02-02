@@ -1,0 +1,19 @@
+﻿@model OnlineMortgageCalculator.ViewModel.LoanModel
+
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+	<h1>Mortgage Calculator</h1>
+	<p class="lead">Calculate your mortgage payments.</p>
+
+	<div class="row">
+		<div class="col-md-6">
+			@using (Html.BeginForm("Index", "Calculate", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+			{
+				<input type="submit" value="Go to Calculator" class="btn btn-primary" />
+			}
+		</div>
+	</div>
+</div>
