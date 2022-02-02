@@ -14,7 +14,7 @@ Tested UI on Chrome browsers via url: https://localhost:44338/
 
 Compared monthly payment results to other Mortgage Calculators on the Web (https://www.betterbond.co.za/calculators/home-loan-repayment?gclid=Cj0KCQiA0eOPBhCGARIsAFIwTs4TrD4S54xSZn757O8Rx03o_Bn15kK3Cic9vMT2t3JKBO_ojuSQOmMaAk0REALw_wcB).
 
-Further functionality could be added, such as showing the total interest paid over the loan term and catering for additional payments per month.
+Further functionality could be added, such as showing the total interest paid over the loan term and catering for additional payments per month and Authorising the controllers.
 
 Automated testing of the UI, using Visual Studio Test Professional or a tool like Selenium, would provide another level of testing to ensure the application works as expected.
 
