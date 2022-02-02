@@ -27,4 +27,4 @@ Change Web.config - source
   </connectionStrings>
 
 NOTE:
-I budget for about 4 hours and did not had time to implement an API solution.
+I budget for about 3 hours and did not had time to implement an API solution.
