@@ -3,12 +3,14 @@ Notes on how I approached and tested this solution (Visual Studio 2019):
 I Created a .NET Solution and Project called OnlineMortgageCalculator using the .NET 4.7.2 Framework.
 
 I created a Login and Register function for users. Can be test to click on 'Login' and 'Register' on Home page.
+Login Url: https://localhost:44338/Account/Login
+Register Url: https://localhost:44338/Account/Register
 
 I used http://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula and http://www.mtgprofessor.com/formulas.htm as reference for the monthly payment formula.
 
 Used javascript and jQuery that calculates the monthly mortgage payments for a fixed interest rate on the Home/Index.cshtml page.
 
-Tested UI on Chrome browsers.
+Tested UI on Chrome browsers via url: https://localhost:44338/
 
 Compared monthly payment results to other Mortgage Calculators on the Web (https://www.betterbond.co.za/calculators/home-loan-repayment?gclid=Cj0KCQiA0eOPBhCGARIsAFIwTs4TrD4S54xSZn757O8Rx03o_Bn15kK3Cic9vMT2t3JKBO_ojuSQOmMaAk0REALw_wcB).
 
